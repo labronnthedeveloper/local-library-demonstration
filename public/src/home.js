@@ -43,7 +43,6 @@ function getMostCommonGenres(books) {
     }
     return acc;
   }, {});
-  console.log(count);
 
   let keys = Object.keys(count);
   keys.sort((keyA, keyB) => {
@@ -93,8 +92,8 @@ function getMostPopularBooks(books) {
       }
     }
   });
-  let sortedArray = popularBooks.sort(function (a, b) {
-    return b.count - a.count;
+  let sortedArray = popularBooks.sort(function (firstValue, secondValue) {
+    return secondValue.count - firstValue.count;
   });
 
   _capArrayLength(sortedArray, 5);
@@ -137,8 +136,8 @@ function getMostPopularAuthors(books, authors){
     return popAuthorsObj;
   });
   // map()
-  let sortedAuthorMap = authorMap.sort(function (a, b) {
-    return b.count - a.count;
+  let sortedAuthorMap = authorMap.sort(function (firstValue, secondValue) {
+    return secondValue.count - firstValue.count;
   });
 
   _capArrayLength(sortedAuthorMap, 5);
