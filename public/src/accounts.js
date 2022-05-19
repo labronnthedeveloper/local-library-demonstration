@@ -6,6 +6,7 @@ function findAccountById(accounts, id) {
 
 function sortAccountsByLastName(accounts) {
   return accounts.sort((lastAccountA, lastAccountB) =>
+  // ternary operator
     lastAccountA.name.last.toLowerCase() < lastAccountB.name.last.toLowerCase()
       ? -1
       : 1
